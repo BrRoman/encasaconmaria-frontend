@@ -1,20 +1,20 @@
-import { useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 
-import Home from './pages/Home';
-import About from './pages/About';
-import Products from './pages/Products';
-import Contact from './pages/Contact';
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Products from "./pages/Products";
+import Contact from "./pages/Contact";
 
-import './App.css';
+import "./App.css";
 
 export default function App() {
   return (
     <Routes>
-      <Route path='/encasaconmaria' element={<Home />} />
-      <Route path='/encasaconmaria/about' element={<About />} />
-      <Route path='/encasaconmaria/products' element={<Products />} />
-      <Route path='/encasaconmaria/contact' element={<Contact />} />
+      <Route path="" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/products" element={<Products />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   );
 }

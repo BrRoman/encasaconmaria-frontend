@@ -21,7 +21,7 @@ const pages = [
 const pagesHtml = pages.map((page) => {
   return (
     <li key={page.id}>
-      <NavLink to={"/encasaconmaria/" + page.slug}>{page.title}</NavLink>
+      <NavLink to={"/" + page.slug}>{page.title}</NavLink>
     </li>
   );
 });
@@ -30,7 +30,7 @@ function Menu(props) {
   return (
     <>
       <nav>
-        <Link to={"/encasaconmaria/"}>En casa con María</Link>
+        <Link to={"/"}>En casa con María</Link>
 
         <ul>{pagesHtml}</ul>
       </nav>

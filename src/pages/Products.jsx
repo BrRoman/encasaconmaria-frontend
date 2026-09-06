@@ -31,13 +31,16 @@ export default function Products() {
   if (error) return <h1>{error}</h1>;
 
   return (
-    <div>
-      <h1>Data Fetched Successfully!</h1>
-      <ul>
-        {data.map((item) => (
-          <li key={item.id}>{item.name}</li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <Menu />
+      <div>
+        <h1>Data Fetched Successfully!</h1>
+        <ul>
+          {data.map((item) => (
+            <li key={item.id}>{item.name}</li>
+          ))}
+        </ul>
+      </div>
+    </>
   );
 }

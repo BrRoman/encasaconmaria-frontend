@@ -3,16 +3,21 @@ import { Link, NavLink } from "react-router-dom";
 const pages = [
   {
     id: 1,
+    slug: "",
+    title: "Inicio",
+  },
+  {
+    id: 2,
     slug: "about",
     title: "¿Quienes somos?",
   },
   {
-    id: 2,
+    id: 3,
     slug: "products",
     title: "Productos",
   },
   {
-    id: 3,
+    id: 4,
     slug: "contact",
     title: "Contáctanos",
   },
@@ -20,7 +25,7 @@ const pages = [
 
 const pagesHtml = pages.map((page) => {
   return (
-    <li key={page.id}>
+    <li key={page.id} className="text-gray-300 hover:text-white">
       <NavLink to={"/" + page.slug}>{page.title}</NavLink>
     </li>
   );
@@ -29,11 +34,17 @@ const pagesHtml = pages.map((page) => {
 function Menu(props) {
   return (
     <>
-      <nav>
-        <Link to={"/"}>En casa con María</Link>
+      <div className="flex justify-center items-center py-4">
+        <img
+          alt="En casa con María logo"
+          src="/encasaconmaria-frontend/src/static/img/maria.png"
+          className="h-8 w-auto mr-4"
+        />
 
-        <ul>{pagesHtml}</ul>
-      </nav>
+        <nav>
+          <ul className="flex space-x-4">{pagesHtml}</ul>
+        </nav>
+      </div>
     </>
   );
 }

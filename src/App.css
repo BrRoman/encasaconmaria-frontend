@@ -15,8 +15,15 @@
 
   #categories {
     img {
+      transition: 0.3s;
       background-color: white;
       max-width: 450px;
+    }
+
+    @media (min-width: 768px) {
+      img:hover {
+        transform: scale(1.05);
+      }
     }
   }
 }

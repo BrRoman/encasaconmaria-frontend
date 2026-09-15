@@ -35,14 +35,19 @@ function Menu(props) {
   return (
     <>
       <div className="flex justify-center items-center py-4">
-        <img
-          alt="En casa con María logo"
-          src="/encasaconmaria-frontend/src/static/img/maria.png"
-          className="h-8 w-auto mr-4"
-        />
-
         <nav>
-          <ul className="flex space-x-4">{pagesHtml}</ul>
+          <ul className="flex space-x-4">
+            <li key="0">
+              <NavLink to={"/"}>
+                <img
+                  alt="En casa con María logo"
+                  src="/encasaconmaria-frontend/src/static/img/maria.png"
+                  className="h-8 w-auto"
+                />
+              </NavLink>
+            </li>
+            {pagesHtml}
+          </ul>
         </nav>
       </div>
     </>

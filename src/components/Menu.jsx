@@ -14,7 +14,7 @@ const pages = [
   {
     id: 3,
     slug: "products",
-    title: "Productos",
+    title: "Tienda",
   },
   {
     id: 4,

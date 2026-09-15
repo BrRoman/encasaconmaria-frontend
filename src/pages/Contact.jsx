@@ -43,7 +43,7 @@ export default function Contact() {
         <form
           method="post"
           action="https://forms.un-static.com/forms/539fb9910b700b58d2a033a92ac3723d73fe553e"
-          className="flex flex-col items-start gap-4 p-8"
+          className="flex flex-col items-start gap-4 px-8"
         >
           {/* Nombre */}
           <div className="form-group">
@@ -123,13 +123,16 @@ export default function Contact() {
           </div>
         </form>
 
-        <div>
+        <div className="mt-8 mb-2">
           <small>
-            (Powered by{" "}
-            <a rel="nofollow" href="https://un-static.com/">
+            Powered by{" "}
+            <a
+              rel="nofollow"
+              href="https://un-static.com/"
+              className="text-blue-500 hover:text-blue-700"
+            >
               Un-static Forms
             </a>
-            )
           </small>
         </div>
       </div>

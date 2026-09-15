@@ -4,7 +4,6 @@ import mariaImg from "../static/img/maria.png";
 import rosario from "../static/img/rosario.png";
 import jabon from "../static/img/jabon.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./Home.css";
 
 export default function Home() {
   return (

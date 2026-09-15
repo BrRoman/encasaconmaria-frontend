@@ -25,32 +25,37 @@ const pages = [
 
 const pagesHtml = pages.map((page) => {
   return (
-    <li key={page.id} className="text-gray-300 hover:text-white">
-      <NavLink to={"/" + page.slug}>{page.title}</NavLink>
+    <li key={page.id} className="text-gray-200 hover:text-white">
+      <NavLink
+        className={({ isActive }) =>
+          isActive ? "nav-link active" : "nav-link"
+        }
+        to={"/" + page.slug}
+      >
+        {page.title}
+      </NavLink>
     </li>
   );
 });
 
 function Menu(props) {
   return (
-    <>
-      <div className="flex justify-center items-center py-4">
-        <nav>
-          <ul className="flex space-x-4">
-            <li key="0">
-              <NavLink to={"/"}>
-                <img
-                  alt="En casa con María logo"
-                  src="/encasaconmaria-frontend/src/static/img/maria.png"
-                  className="h-8 w-auto"
-                />
-              </NavLink>
-            </li>
-            {pagesHtml}
-          </ul>
-        </nav>
-      </div>
-    </>
+    <div id="menu" className="flex justify-center items-center py-4">
+      <nav>
+        <ul className="flex space-x-4">
+          <li key="0">
+            <NavLink to={"/"}>
+              <img
+                alt="En casa con María logo"
+                src="/encasaconmaria-frontend/src/static/img/maria.png"
+                className="h-8 w-auto"
+              />
+            </NavLink>
+          </li>
+          {pagesHtml}
+        </ul>
+      </nav>
+    </div>
   );
 }
 

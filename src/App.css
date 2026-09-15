@@ -1,3 +1,10 @@
+#menu {
+  .active {
+    color: rgb(182, 182, 182) !important;
+    pointer-events: none;
+  }
+}
+
 #home {
   #menu {
     a {
@@ -40,6 +47,7 @@
 
   h1 {
     color: var(--blue-light);
+    font-size: 2rem;
   }
 
   label {

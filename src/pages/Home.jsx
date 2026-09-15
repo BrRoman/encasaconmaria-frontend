@@ -8,7 +8,7 @@ import "./Home.css";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center">
+    <div id="home" className="flex flex-col items-center">
       <img
         src={mariaImg}
         alt="Virgen María"

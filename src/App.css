@@ -1,0 +1,22 @@
+#home {
+  #menu {
+    a {
+      color: white;
+    }
+
+    a:hover {
+      color: rgb(213, 213, 213);
+    }
+
+    span {
+      margin: 0 0 0 5px;
+    }
+  }
+
+  #categories {
+    img {
+      background-color: white;
+      max-width: 450px;
+    }
+  }
+}

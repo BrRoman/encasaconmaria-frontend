@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import Menu from "../components/Menu";
 
+// TODO: Filtering and sorting.
+
 export default function Products() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);

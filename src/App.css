@@ -1,1 +1,79 @@
-@import "tailwindcss";
+#menu {
+  .active {
+    color: rgb(182, 182, 182) !important;
+    pointer-events: none;
+  }
+}
+
+#home {
+  #menu {
+    a {
+      color: white;
+    }
+
+    a:hover {
+      color: rgb(213, 213, 213);
+    }
+
+    span {
+      margin: 0 0 0 5px;
+    }
+  }
+
+  #categories {
+    img {
+      transition: 0.3s;
+      background-color: white;
+      max-width: 450px;
+    }
+
+    @media (min-width: 768px) {
+      img:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+#products {
+  img {
+    background-color: white;
+  }
+}
+
+#contact {
+  background-color: rgb(255, 255, 255);
+  color: rgb(67, 67, 67);
+
+  h1 {
+    color: var(--blue-light);
+    font-size: 2rem;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 0 0 10px 0;
+    width: 100%;
+
+    input,
+    textarea {
+      border: 1px solid rgb(204, 204, 204);
+      border-radius: 5px;
+      background-color: lightgray;
+      padding: 5px 10px;
+      width: 100%;
+    }
+  }
+
+  button {
+    font-size: 0.9rem;
+    width: 200px;
+    margin: 0 5px;
+  }
+}

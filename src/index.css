@@ -115,3 +115,15 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+.btn {
+  @apply py-2 px-4 my-8 rounded;
+}
+
+.btn-white {
+  @apply bg-white text-blue-900;
+}
+
+.btn-white:hover {
+  @apply text-blue-700;
+}

@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const pages = [
   {
@@ -39,22 +41,48 @@ const pagesHtml = pages.map((page) => {
 });
 
 function Menu(props) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div id="menu" className="flex justify-center items-center py-4">
-      <nav>
-        <ul className="flex space-x-4">
-          <li key="0">
-            <NavLink to={"/"}>
-              <img
-                alt="En casa con María logo"
-                src="/encasaconmaria-frontend/src/static/img/maria.png"
-                className="h-8 w-auto"
-              />
-            </NavLink>
-          </li>
-          {pagesHtml}
-        </ul>
-      </nav>
+    <div id="menu" className="md:flex md:items-center md:justify-between">
+      <div className="flex justify-between items-center py-4">
+        <NavLink to={"/"}>
+          <div className="flex items-center">
+            <img
+              alt="En casa con María logo"
+              src="/encasaconmaria-frontend/src/static/img/maria.png"
+              className="h-8 mx-4"
+            />
+
+            <p className="m-0 text-2xl">En casa con María</p>
+          </div>
+        </NavLink>
+
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className={isOpen ? "hidden" : "block"}
+          className="md:hidden"
+        >
+          <FontAwesomeIcon icon="fa-solid fa-bars" size="2x" />
+        </button>
+
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className={isOpen ? "block" : "hidden"}
+          className="md:hidden"
+        >
+          <FontAwesomeIcon icon="fa-solid fa-close" size="2x" />
+        </button>
+      </div>
+
+      <div>
+        <nav
+          className={isOpen ? "block" : "hidden"}
+          className="md:block md:mr-4"
+        >
+          <ul className="flex space-x-4">{pagesHtml}</ul>
+        </nav>
+      </div>
     </div>
   );
 }

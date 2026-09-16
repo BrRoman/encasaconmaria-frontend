@@ -61,27 +61,22 @@ function Menu(props) {
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={isOpen ? "hidden" : "block"}
-          className="md:hidden"
+          className={isOpen ? "hidden" : "block md:hidden"}
         >
           <FontAwesomeIcon icon="fa-solid fa-bars" size="2x" />
         </button>
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={isOpen ? "block" : "hidden"}
-          className="md:hidden"
+          className={isOpen ? "block md:hidden" : "hidden"}
         >
           <FontAwesomeIcon icon="fa-solid fa-close" size="2x" />
         </button>
       </div>
 
       <div>
-        <nav
-          className={isOpen ? "block" : "hidden"}
-          className="md:block md:mr-4"
-        >
-          <ul className="flex space-x-4">{pagesHtml}</ul>
+        <nav className={isOpen ? "block" : "hidden md:block md:mr-4"}>
+          <ul className="flex-column text-left ml-4 mb-4">{pagesHtml}</ul>
         </nav>
       </div>
     </div>

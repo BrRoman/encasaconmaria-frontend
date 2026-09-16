@@ -74,11 +74,11 @@ function Menu(props) {
         </button>
       </div>
 
-      <div>
-        <nav className={isOpen ? "block" : "hidden md:block md:mr-4"}>
-          <ul className="flex-column text-left ml-4 mb-4">{pagesHtml}</ul>
-        </nav>
-      </div>
+      <nav className={isOpen ? "block" : "hidden md:block"}>
+        <ul className="flex-column md:flex md:space-x-4 text-left ml-4 mb-4 md:mr-4">
+          {pagesHtml}
+        </ul>
+      </nav>
     </div>
   );
 }

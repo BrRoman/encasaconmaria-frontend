@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import mariaImg from "../static/img/maria.png";
 
 const pages = [
   {
@@ -50,7 +51,7 @@ function Menu(props) {
           <div className="flex items-center">
             <img
               alt="En casa con María logo"
-              src="/encasaconmaria-frontend/src/static/img/maria.png"
+              src={mariaImg}
               className="h-8 mx-4"
             />
 

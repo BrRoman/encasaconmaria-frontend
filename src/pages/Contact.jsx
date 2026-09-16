@@ -34,7 +34,7 @@ export default function Contact() {
 
       <div
         id="contact"
-        className="w-full md:w-2/3 lg:w-1/2 mx-auto rounded-md mb-8"
+        className="w-full md:w-2/3 lg:w-1/2 mx-auto md:rounded-md mb-8"
       >
         <h1>¡Contáctanos!</h1>
 
